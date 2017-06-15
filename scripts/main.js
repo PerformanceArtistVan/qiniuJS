@@ -52,6 +52,15 @@ $(function() {
         // },
         auto_start: true,
         log_level: 5,
+        filters: {
+            prevent_duplicates: true,
+            mime_types: [
+                //{title : "flv files", extensions : "flv"}, // 限定flv后缀上传格式上传
+                //{title : "Video files", extensions : "flv,mpg,mpeg,avi,wmv,mov,asf,rm,rmvb,mkv,m4v,mp4"}, // 限定flv,mpg,mpeg,avi,wmv,mov,asf,rm,rmvb,mkv,m4v,mp4后缀格式上传
+                {title : "Image files", extensions : "jpg,gif,png"}, // 限定jpg,gif,png后缀上传
+                //{title : "Zip files", extensions : "zip"} // 限定zip后缀上传
+            ]
+        },
         init: {
             'FilesAdded': function(up, files) {
                 $('table').show();
