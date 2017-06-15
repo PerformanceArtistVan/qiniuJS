@@ -1,0 +1,8 @@
+.yo-rc.json
+.bowerrc
+.editorconfig
+.idea
+bower_components/
+node_modules/
+dist/
+.tmp
